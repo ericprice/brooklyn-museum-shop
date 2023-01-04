@@ -1,0 +1,744 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+input, textarea, select {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  outline: 0;
+}
+
+
+@font-face {
+  font-family: 'GT America BkM';
+  src: url('GT-America-Standard-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT America';
+  src: url('GT-America-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT America';
+  src: url('GT-America-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT America Mono';
+  src: url('gt-america-mono-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT America Mono';
+  src: url('gt-america-mono-regular-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+.product-item__image-link * {
+  transition: none !important;
+}
+
+html,
+body {
+  font-family: 'GT America Mono', sans-serif;
+}
+
+html {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.4vw;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 20px !important;
+  }
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.3em;
+}
+
+body::before,
+body::after {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 1rem;
+  bottom: 1rem;
+  z-index: 99999;
+  width: .35rem;
+  background: #fff;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  body::before,
+  body::after {
+    display: none;
+  }
+}
+
+body::before {
+  left: 1rem;
+}
+
+body::after {
+  right: 1rem;
+}
+
+strong,
+b {
+  font-weight: normal !important;
+  text-transform: uppercase;
+}
+
+.section.section--divider-solid:before {
+  box-shadow: none;
+  background: #000;
+  height: .35rem;
+}
+
+button {
+  color: #000;
+}
+
+.section {
+  padding-top: var(--spacing-7);
+  padding-bottom: var(--spacing-7);
+}
+
+.section-introduction > *:last-child {
+  margin-bottom: var(--spacing-4);
+}
+
+.section-introduction__heading {
+  font-size: var(--font-size-heading-display-3);
+  margin-left: -.06em;
+}
+
+.product__title,
+.product__vendor {
+  font-size: 2.5rem !important;
+  text-transform: uppercase;
+}
+
+.ff-subheading,
+.product__vendor_and_sku .product__vendor {
+  font-family: 'GT America BkM', sans-serif !important;
+  font-weight: normal !important;
+  line-height: 1em !important;
+  letter-spacing: -.02em !important;
+}
+
+.ff-subheading {
+  line-height: 1.3em !important;
+}
+
+.ff-body p,
+.ff-body li {
+  line-height: 1.3em !important;
+}
+
+.product__title {
+  margin-bottom: 0;
+}
+
+.product__vendor_and_sku .product__vendor {
+  font-size: var(--font-size-heading-1-base);
+  opacity: .4;
+}
+
+.fs-navigation-base,
+.featured-collection-slider__navigation-list-item .ff-heading {
+  text-transform: none !important;
+}
+
+.featured-collection-slider__navigation-list-item .ff-heading {
+  opacity: .4;
+  color: #000 !important;
+}
+
+.featured-collection-slider__navigation-list-item.selected .ff-heading {
+  opacity: 1;
+}
+
+.fs-accent,
+.footer__newsletter-button {
+  letter-spacing: 0 !important;
+}
+
+.btn::before,
+.btn span::before,
+.btn span::after,
+.link-hover::before,
+.btn.btn--primary.btn--overlay::after,
+.header-overlay.is-active {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.btn.btn--callout,
+.btn.btn--primary,
+.btn.btn--secondary,
+.btn.btn--tertiary {
+  font-size: var(--font-size-button) !important;
+  padding: var(--button-padding-normal) !important;
+  border: 1px solid #000;
+}
+
+.btn--primary {
+  background: #000 !important;
+}
+
+.product-item__product-vendor,
+.product-item__swatch-count{
+  opacity: .4;
+}
+
+.meganav__nav h4,
+.fs-accent {
+  font-size: var(--font-size-body-100);
+}
+
+.product-thumbnails__item-link.active::after,
+.header__logo .image,
+.featured-collection-slider__navigation-list-item .indicator,
+.sales-banner__bar-item:before,
+.btn.btn--primary::after,
+.shopify-challenge__button::after {
+  display: none;
+}
+
+.product-item__inner .product-item__hover-container,
+.meganav,
+.navigation__submenu-list {
+  border: 0 !important;
+}
+
+.meganav {
+  padding-right: 1.35rem;
+  padding-left: 1.35rem;
+}
+
+.footer__text a,
+.footer__links a:hover,
+.header__links-list a[data-link]:hover, .header__links-list button[data-link]:hover,
+.no-js .no-js-menu a:hover,
+.meganav h4 a:hover {
+  text-decoration: none;
+}
+
+.header__logo {
+  margin-right: var(--spacing-7) !important;
+  transition: margin-right .3s ease-in-out;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: .75rem !important;
+  margin-bottom: .75rem !important;
+}
+
+@media (min-width: 960px){
+  .template-index .header__logo {
+    margin-right: 0 !important;
+  }
+  
+  .sticky-header-active .header__logo,
+  .template-collection .header__logo,
+  .template-product .header__logo {
+    margin-right: var(--spacing-7) !important;
+  }
+}
+
+.header {
+  padding-top: 0;
+  //padding-bottom: 1rem;
+}
+
+.header__links {
+  padding: 0 !important;
+}
+
+.header__logo a {
+  display: inline-block;
+  width: 8rem !important;
+  height: 2rem;
+  background: url('logo.svg') left center no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  overflow: hidden;
+  transition: width .3s ease-in-out;
+}
+
+@media (min-width: 960px){
+  .template-index .header__logo a {
+    width: 0 !important;
+  }
+}
+
+.sticky-header-active .header__logo a,
+.template-collection .header__logo a,
+.template-product .header__logo a {
+  width: 8rem !important;
+}
+
+#shopify-section-announcement-bar *,
+.template-index #shopify-section-header .header,
+.template-index .announcement-bar .swiper,
+.template-index .bkm-shop-header,
+.template-index .image-hero,
+.template-index .hero-image-header {
+  background: var(--homepage-heading-color);
+}
+
+#shopify-section-announcement-bar {
+  position: relative;
+  overflow: visible !important;
+}
+
+#shopify-section-announcement-bar::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 1.75rem;
+  left: 1.75rem;
+  z-index: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+@media (min-width: 769px) {
+  #shopify-section-announcement-bar::after {
+    right: 4rem;
+    left: 4rem;
+  }
+}
+
+.announcement-bar__item-inner {
+  padding: .4rem 0;
+}
+
+#shopify-section-header .header.is-sticky {
+  background: #fff;
+}
+
+.bkm-shop-header {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.bkm-shop-header-content {
+  position: relative;
+  max-width: calc(1400px + 8rem);
+  margin: 0 auto;
+}
+
+.bkm-shop-logo {
+  text-align: center;
+  font-family: 'GT America BkM', sans-serif;
+  text-transform: uppercase;
+  font-size: var(--font-size-heading-display-3);
+  line-height: 1.1em;
+  letter-spacing: -.03em;
+}
+
+@media (max-width: 959px){
+  .bkm-shop-header,
+  .bkm-shop-logo {
+    display: none;
+  }
+}
+
+.bkm-logo {
+  position: absolute;
+  display: block;
+  top: .75rem;
+  left: 4rem;
+  width: 13rem;
+  height: 2rem;
+  background: url('logo-bkm.svg') top right no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.image-hero {
+  padding: 0 1.75rem !important;
+}
+
+@media (min-width: 769px) {
+  .image-hero {
+    padding: 0 2.333rem !important;
+  }
+}
+
+.hero-image-header {
+  padding: 1.5rem var(--space-outer) 2rem;
+  text-align: center;
+  //border-bottom: .35rem solid #000;
+}
+
+.header__row-segment.right {
+  mix-blend-mode: multiply;
+}
+
+.section-blocks__subheading + :not(.section-blocks) .section-blocks__button {
+  margin-top: var(--spacing-2) !important;
+  mix-blend-mode: multiply;
+}
+
+.ff-heading {
+  line-height: 1em;
+  letter-spacing: -.03em;
+}
+
+.meganav h4,
+.ff-subheading {
+  font-family: 'GT America Mono', sans-serif !important;
+  text-transform: none;
+}
+
+button,
+button .ff-heading,
+.fs-accent,
+.ff-subheading *,
+.ff-body,
+.ff-body *,
+.product__callouts-items *,
+.filter-bar__button,
+.shopify-policy__body * {
+  font-family: 'GT America Mono', sans-serif !important;
+}
+
+.btn * {
+  text-transform: uppercase;
+}
+
+.recommended-products .section__inner {
+  border-top: .35rem solid #000;
+  padding-top: 2.5rem;
+}
+
+.image-hero__overlay {
+  display: none !important;
+}
+
+.footer {
+  margin-top: var(--spacing-7);
+  padding-top: 0 !important;
+  padding-bottom: .75rem !important;
+}
+
+.footer-inner {
+  border-top: .35rem solid #000;
+  padding-top: var(--spacing-7);
+}
+
+.footer-section {
+  margin-bottom: 1.3rem;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 0 1rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@media screen and (max-width: 767px) {
+  .footer-contact {
+    grid-column: span 12;
+  }
+  
+  .footer-social {
+    grid-column: span 6;
+  }
+  
+  .footer-nav {
+    grid-column: span 6;
+  }
+  
+  .footer-newsletter,
+  .footer-copyright {
+    grid-column: span 12;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-inner {
+    display: grid;
+    gap: 0 1rem;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+  .footer-section {
+    margin-bottom: 3.9rem;
+  }
+  
+  .footer-contact {
+    grid-column: span 6;
+  }
+  
+  .footer-social {
+    grid-column: span 3;
+  }
+  
+  .footer-nav {
+    grid-column: span 3;
+  }
+  
+  .footer-newsletter,
+  .footer-copyright {
+    grid-column: span 12;
+  }
+  
+  .footer-copyright {
+    text-align: center;
+  }
+}
+
+.footer-newsletter {
+  padding-bottom: var(--spacing-7);
+  margin-bottom: var(--spacing-7);
+  border-bottom: .35rem solid #000;
+}
+
+.footer-newsletter-heading {
+  font-family: 'GT America BkM', sans-serif !important;
+  line-height: 1em;
+  letter-spacing: -.02em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--font-size-heading-display-1);
+  margin-bottom: var(--spacing-4);
+}
+
+.footer-newsletter .subscribe {
+  position: relative;
+}
+
+.footer-bkm {
+  width: 13rem;
+  height: auto;
+  margin-bottom: .333rem;
+}
+
+.footer-newsletter input[type=email] {
+  width: 100%;
+  border: 0;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 20rem;
+  height: auto;
+  font-size: var(--font-size-heading-5-base);
+}
+
+.footer-newsletter input[type=email]::placeholder {
+  color: #000;
+  opacity: .25;
+}
+
+.footer-newsletter input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  padding: 1rem;
+  height: auto;
+  font-size: var(--font-size-heading-5-base);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.footer__newsletter .footer__newsletter-button {
+  right: .5rem;
+  text-transform: none;
+  font-size: var(--font-size-body-100);
+}
+
+.product__callouts-items,
+.product__callouts-mini-item {
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+.quantity-input {
+  background: var(--color-background-meta);
+  border: 0;
+}
+
+.collection-banner__text-container-heading {
+  font-size: var(--font-size-heading-display-1);
+  line-height: 1em !important;
+}
+
+.filter-bar {
+  padding-top: 0;
+}
+
+.testimonials {
+  margin-bottom: 2rem;
+}
+
+.modal__inner,
+.image__inner,
+.btn,
+#overlayContainer #page {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.meganav__promo-image .image__inner,
+.image-with-text-split__image .image__inner {
+  border-radius: 0;
+}
+
+.product-form__cart-submit,
+.quick-cart__submit {
+  background: #000 !important;
+  border-color: #000 !important;
+  color: #fff !important;
+  font-size: 1rem !important;
+  line-height: 1.2em !important;
+}
+
+.quick-cart__submit::after {
+  display: none !important;
+}
+
+.shoppable-feature__carousel-outer .shoppable-feature__carousel {
+  border: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+  .quick-cart__container,
+  .quick-cart__footer {
+    padding-right: 3rem;
+  }
+}
+
+.filter-group__values-active-values {
+  text-overflow: clip !important;
+  overflow: visible;
+  white-space: normal;
+}
+
+.pagination__navigation-button {
+  border: 0;
+}
+
+.pagination__item--active {
+  opacity: .3;
+}
+
+[data-js-cart-count] {
+  font-size: 12px;
+}
+
+.hover .image .image__inner {
+  transition: none !important;
+  transform: none !important;
+}
+
+.quick-cart__header {
+  border-bottom: .35rem solid #000;
+}
+
+.quick-cart__footer-inner {
+  border-top: .35rem solid #000;
+}
+
+.quick-cart__item-title + .quick-cart__item-variant, .quick-cart__item-title + .quick-cart__item-subscriptions,
+.quick-cart__item-variant + .quick-cart__item-price-wrapper {
+  margin: 0;
+}
+
+.quick-view-view-product-details-link {
+  justify-content: left;
+}
+
+.login__links {
+  display: block;
+  text-align: center;
+}
+
+.login__links li + li:before {
+  display: none;
+  content: '';
+}
+
+.quick-search__footer .btn.btn--primary,
+#customer_login .btn--primary {
+  color: #fff !important;
+}
