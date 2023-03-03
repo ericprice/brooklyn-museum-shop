@@ -114,13 +114,13 @@ html {
 
 @media screen and (min-width: 768px) {
   html {
-    font-size: 1.4vw;
+    font-size: 1.1vw;
   }
 }
 
 @media screen and (min-width: 1400px) {
   html {
-    font-size: 20px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -138,8 +138,8 @@ body::after {
   bottom: 1rem;
   z-index: 99999;
   width: .35rem;
-  background: #fff;
-  mix-blend-mode: difference;
+  background: #000;
+  //mix-blend-mode: difference;
   pointer-events: none;
 }
 
@@ -188,10 +188,19 @@ button {
   margin-left: -.06em;
 }
 
-.product__title,
-.product__vendor {
+.product__title {
   font-size: 2.5rem !important;
   text-transform: uppercase;
+}
+
+.product__vendor a {
+  margin-top: .5rem;
+  display: block;
+  font-family: 'GT America Mono', sans-serif;
+}
+
+.fs-product-card-title {
+  text-transform: none;
 }
 
 .ff-subheading,
@@ -234,6 +243,10 @@ button {
   opacity: 1;
 }
 
+.carousel.swiper {
+  overflow: hidden !important;
+}
+
 .fs-accent,
 .footer__newsletter-button {
   letter-spacing: 0 !important;
@@ -244,7 +257,8 @@ button {
 .btn span::after,
 .link-hover::before,
 .btn.btn--primary.btn--overlay::after,
-.header-overlay.is-active {
+.header-overlay.is-active,
+.featured-collection-slider__content-view-all-header {
   display: none !important;
   opacity: 0 !important;
 }
@@ -301,7 +315,7 @@ button {
 }
 
 .header__logo {
-  margin-right: var(--spacing-7) !important;
+  margin-right: var(--spacing-2) !important;
   transition: margin-right .3s ease-in-out;
   padding-top: 0;
   padding-bottom: 0;
@@ -309,17 +323,17 @@ button {
   margin-bottom: .75rem !important;
 }
 
-@media (min-width: 960px){
-  .template-index .header__logo {
-    margin-right: 0 !important;
-  }
-  
-  .sticky-header-active .header__logo,
-  .template-collection .header__logo,
-  .template-product .header__logo {
-    margin-right: var(--spacing-7) !important;
-  }
-}
+//@media (min-width: 960px){
+//  .template-index .header__logo {
+//    margin-right: 0 !important;
+//  }
+//  
+//  .sticky-header-active .header__logo,
+//  .template-collection .header__logo,
+//  .template-product .header__logo {
+//    margin-right: var(--spacing-7) !important;
+//  }
+//}
 
 .header {
   padding-top: 0;
@@ -339,12 +353,13 @@ button {
   text-indent: -9999px;
   overflow: hidden;
   transition: width .3s ease-in-out;
+  margin-right: var(--spacing-7) !important;
 }
 
 @media (min-width: 960px){
-  .template-index .header__logo a {
-    width: 0 !important;
-  }
+  //.template-index .header__logo a {
+  //  width: 0 !important;
+  //}
 }
 
 .sticky-header-active .header__logo a,
@@ -359,12 +374,13 @@ button {
 .template-index .bkm-shop-header,
 .template-index .image-hero,
 .template-index .hero-image-header {
-  background: var(--homepage-heading-color);
+  //background: var(--homepage-heading-color);
 }
 
 #shopify-section-announcement-bar {
   position: relative;
   overflow: visible !important;
+  margin-bottom: 1px;
 }
 
 #shopify-section-announcement-bar::after {
@@ -443,11 +459,11 @@ button {
   }
 }
 
-.hero-image-header {
-  padding: 1.5rem var(--space-outer) 2rem;
-  text-align: center;
-  //border-bottom: .35rem solid #000;
-}
+//.hero-image-header {
+//  padding: 1.5rem var(--space-outer) 2rem;
+//  text-align: center;
+//  //border-bottom: .35rem solid #000;
+//}
 
 .header__row-segment.right {
   mix-blend-mode: multiply;
@@ -491,7 +507,8 @@ button .ff-heading,
 }
 
 .image-hero__overlay {
-  display: none !important;
+  //display: none !important;
+  border-radius: 1.5rem;
 }
 
 .footer {
@@ -549,15 +566,21 @@ button .ff-heading,
     grid-column: span 6;
   }
   
+  .footer-newsletter {
+    grid-column: span 6;
+  }
+  
   .footer-social {
-    grid-column: span 3;
+    grid-column-start: 7;
+    grid-column-end: 10;
   }
   
   .footer-nav {
     grid-column: span 3;
+    grid-column-start: 10;
+    grid-column-end: 13;
   }
   
-  .footer-newsletter,
   .footer-copyright {
     grid-column: span 12;
   }
@@ -567,19 +590,16 @@ button .ff-heading,
   }
 }
 
+.footer-copyright {
+  display: none;
+}
+
 .footer-newsletter {
-  padding-bottom: var(--spacing-7);
   margin-bottom: var(--spacing-7);
-  border-bottom: .35rem solid #000;
 }
 
 .footer-newsletter-heading {
-  font-family: 'GT America BkM', sans-serif !important;
-  line-height: 1em;
-  letter-spacing: -.02em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: var(--font-size-heading-display-1);
+  font-size: var(--font-size-heading-5-base);
   margin-bottom: var(--spacing-4);
 }
 
