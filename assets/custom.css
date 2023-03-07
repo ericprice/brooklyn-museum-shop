@@ -258,7 +258,9 @@ button {
 .link-hover::before,
 .btn.btn--primary.btn--overlay::after,
 .header-overlay.is-active,
-.featured-collection-slider__content-view-all-header {
+.featured-collection-slider__content-view-all-header,
+.shopify-payment-button,
+.product-form__shop-pay {
   display: none !important;
   opacity: 0 !important;
 }
@@ -513,8 +515,9 @@ button .ff-heading,
 
 .footer {
   margin-top: var(--spacing-7);
-  padding-top: 0 !important;
+  padding-top: 2rem !important;
   padding-bottom: .75rem !important;
+  background: #e3e3e3;
 }
 
 .footer-inner {
@@ -596,6 +599,7 @@ button .ff-heading,
 
 .footer-newsletter {
   margin-bottom: var(--spacing-7);
+  mix-blend-mode: multiply;
 }
 
 .footer-newsletter-heading {
@@ -761,4 +765,24 @@ button .ff-heading,
 .quick-search__footer .btn.btn--primary,
 #customer_login .btn--primary {
   color: #fff !important;
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-item__inner {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: .5rem;
+  right: .75rem;
+  bottom: .5rem;
+  left: .75rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.grid-item__heading {
+  font-size: var(--font-size-heading-display-1);
 }

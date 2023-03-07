@@ -60,6 +60,116 @@
         "section_padding": "section--vertical-padding-none"
       }
     },
+    "1654878022d8e24a9a": {
+      "type": "grid",
+      "blocks": {
+        "165487802257d72399-2": {
+          "type": "item",
+          "settings": {
+            "width": "33",
+            "height": 420,
+            "mobile_height": 360,
+            "image": "shopify:\/\/shop_images\/noodoll-rabbit-plush-toy-ricebon_3.jpg",
+            "media_fit": "cover",
+            "focal_point": "top",
+            "mobile_focal_point": "center",
+            "text_position": "flex-start_flex-end",
+            "accent": "",
+            "title": "Grid item",
+            "heading_font_class": "fs-heading-2-base",
+            "subheading": "<p>Perfect for lookbooks and editorial photography<\/p>",
+            "subheading_font_class": "fs-heading-6-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "link": "",
+            "link_text": "Shop now",
+            "button_style": "btn--callout",
+            "background_color": "",
+            "text_color": "#000000",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 1) 100%)",
+            "overlay_opacity": 50
+          }
+        },
+        "165487802257d72399-1": {
+          "type": "item",
+          "settings": {
+            "width": "33",
+            "height": 500,
+            "mobile_height": 360,
+            "image": "shopify:\/\/shop_images\/sunday-morning-minimalist-candle_1.jpg",
+            "media_fit": "cover",
+            "focal_point": "center",
+            "mobile_focal_point": "center",
+            "text_position": "flex-start_flex-end",
+            "accent": "",
+            "title": "Grid item",
+            "heading_font_class": "fs-heading-2-base",
+            "subheading": "<p>Perfect for lookbooks and editorial photography<\/p>",
+            "subheading_font_class": "fs-heading-6-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--callout",
+            "background_color": "",
+            "text_color": "#000000",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 1) 100%)",
+            "overlay_opacity": 50
+          }
+        },
+        "165487802257d72399-0": {
+          "type": "item",
+          "settings": {
+            "width": "33",
+            "height": 600,
+            "mobile_height": 360,
+            "image": "shopify:\/\/shop_images\/dreamvacationtapestryblanketinsa.jpg",
+            "media_fit": "cover",
+            "focal_point": "center",
+            "mobile_focal_point": "center",
+            "text_position": "flex-start_flex-end",
+            "accent": "",
+            "title": "Grid item",
+            "heading_font_class": "fs-heading-2-base",
+            "subheading": "<p>Perfect for lookbooks and editorial photography<\/p>",
+            "subheading_font_class": "fs-heading-6-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--callout",
+            "background_color": "",
+            "text_color": "#ffffff",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1) 43%, rgba(0, 0, 0, 1) 100%)",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "165487802257d72399-2",
+        "165487802257d72399-1",
+        "165487802257d72399-0"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "content_alignment": "left",
+        "enable_animation": true,
+        "full_width": false,
+        "spacing": 24,
+        "divider_style": "solid",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
     "165489980473ecbf41": {
       "type": "image-with-text",
       "blocks": {
@@ -94,12 +204,11 @@
       "settings": {
         "image_position": "left",
         "text_alignment": "center",
-        "image": "shopify:\/\/shop_images\/tre_sweater_01.png",
+        "image": "shopify:\/\/shop_images\/back_in_stock_4.jpg",
         "aspect_ratio": "natural",
         "focal_point": "top",
         "image_caption": "",
-        "show_small_image": true,
-        "image_small": "shopify:\/\/shop_images\/tre_sweater_03.png",
+        "show_small_image": false,
         "image_small_aspect_ratio": "natural",
         "image_small_focal_point": "center",
         "background_color": "#ffffff",
@@ -141,114 +250,6 @@
         "enable_animation": true,
         "full_width": true,
         "section_padding": "section--vertical-padding-none"
-      }
-    },
-    "1654878022d8e24a9a": {
-      "type": "grid",
-      "disabled": true,
-      "blocks": {
-        "165487802257d72399-2": {
-          "type": "item",
-          "settings": {
-            "width": "33",
-            "height": 500,
-            "mobile_height": 360,
-            "media_fit": "cover",
-            "focal_point": "top",
-            "mobile_focal_point": "center",
-            "text_position": "flex-start_flex-end",
-            "accent": "",
-            "title": "Grid item",
-            "heading_font_class": "fs-heading-2-base",
-            "subheading": "<p>Perfect for lookbooks and editorial photography<\/p>",
-            "subheading_font_class": "fs-heading-6-base",
-            "text": "",
-            "text_font_class": "fs-body-100",
-            "link": "",
-            "link_text": "Shop now",
-            "button_style": "btn--callout",
-            "background_color": "",
-            "text_color": "#ffffff",
-            "button_background_color": "#ffffff",
-            "button_text_color": "#000000",
-            "color_overlay": "#000000",
-            "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 1) 100%)",
-            "overlay_opacity": 50
-          }
-        },
-        "165487802257d72399-1": {
-          "type": "item",
-          "settings": {
-            "width": "33",
-            "height": 500,
-            "mobile_height": 360,
-            "media_fit": "cover",
-            "focal_point": "center",
-            "mobile_focal_point": "center",
-            "text_position": "flex-start_flex-end",
-            "accent": "",
-            "title": "Grid item",
-            "heading_font_class": "fs-heading-2-base",
-            "subheading": "<p>Perfect for lookbooks and editorial photography<\/p>",
-            "subheading_font_class": "fs-heading-6-base",
-            "text": "",
-            "text_font_class": "fs-body-100",
-            "link": "",
-            "link_text": "",
-            "button_style": "btn--callout",
-            "background_color": "",
-            "text_color": "#ffffff",
-            "button_background_color": "#ffffff",
-            "button_text_color": "#000000",
-            "color_overlay": "#000000",
-            "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 1) 100%)",
-            "overlay_opacity": 50
-          }
-        },
-        "165487802257d72399-0": {
-          "type": "item",
-          "settings": {
-            "width": "33",
-            "height": 600,
-            "mobile_height": 360,
-            "media_fit": "cover",
-            "focal_point": "center",
-            "mobile_focal_point": "center",
-            "text_position": "flex-start_flex-end",
-            "accent": "",
-            "title": "Grid item",
-            "heading_font_class": "fs-heading-2-base",
-            "subheading": "<p>Perfect for lookbooks and editorial photography<\/p>",
-            "subheading_font_class": "fs-heading-6-base",
-            "text": "",
-            "text_font_class": "fs-body-100",
-            "link": "",
-            "link_text": "",
-            "button_style": "btn--callout",
-            "background_color": "",
-            "text_color": "#ffffff",
-            "button_background_color": "#ffffff",
-            "button_text_color": "#000000",
-            "color_overlay": "#000000",
-            "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1) 43%, rgba(0, 0, 0, 1) 100%)",
-            "overlay_opacity": 50
-          }
-        }
-      },
-      "block_order": [
-        "165487802257d72399-2",
-        "165487802257d72399-1",
-        "165487802257d72399-0"
-      ],
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "content_alignment": "left",
-        "enable_animation": true,
-        "full_width": false,
-        "spacing": 24,
-        "divider_style": "solid",
-        "section_padding": "section--vertical-padding-top-bottom"
       }
     },
     "16549177944ec2347e": {
@@ -343,14 +344,6 @@
             "subheading_font_class": "fs-heading-5-base"
           }
         },
-        "63e2f450-ccdf-4ba0-8c95-8e7b01b5c7f5": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/S06_BEEi094.jpg",
-            "image_size": 250,
-            "image_size_mobile": 200
-          }
-        },
         "7f329234-f652-4947-8f09-cad43d072028": {
           "type": "button",
           "settings": {
@@ -364,7 +357,6 @@
         "1654913893d03d0b33-0",
         "1654913893d03d0b33-1",
         "1654913893d03d0b33-2",
-        "63e2f450-ccdf-4ba0-8c95-8e7b01b5c7f5",
         "7f329234-f652-4947-8f09-cad43d072028"
       ],
       "settings": {
@@ -376,8 +368,8 @@
         "focal_point": "top",
         "content_alignment": "center",
         "background_color": "#dfd1ad",
-        "text_color": "#ffffff",
-        "button_background_color": "#ffffff",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
         "button_text_color": "#ffffff",
         "enable_animation": true,
         "section_padding": "section--vertical-padding-top-bottom"
@@ -674,6 +666,7 @@
     },
     "1654880426b1f83355": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "16548804264c48a1d9-0": {
           "type": "heading",
@@ -723,6 +716,7 @@
     },
     "1655748277aeb95c8a": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "1655748276a16c587f-0": {
           "type": "heading",
@@ -833,9 +827,9 @@
   },
   "order": [
     "16558445044f80743b",
+    "1654878022d8e24a9a",
     "165489980473ecbf41",
     "1655855477ee9538e0",
-    "1654878022d8e24a9a",
     "16549177944ec2347e",
     "1655855558c1ac2348",
     "1654913893935a57bd",
