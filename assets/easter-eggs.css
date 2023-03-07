@@ -1,0 +1,64 @@
+@keyframes slide-down {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes climb-up {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+
+.firefighter,
+.squirrel {
+  position: fixed;
+  z-index: 9999999999;
+  pointer-events: none;
+}
+
+.firefighter {
+  top: 0;
+  right: -.3rem;
+  width: 5.5rem;
+  height: 9.5rem;
+  background: url('firefighter.png') center center no-repeat;
+  background-size: contain;
+  animation: slide-down 2.5s infinite ease-in-out;
+}
+
+.squirrel {
+  bottom: 0;
+  left: .6rem;
+  width: 3.5rem;
+  height: 7.5rem;
+  background: url('squirrel.gif') center center no-repeat;
+  background-size: contain;
+  animation: climb-up 3.5s infinite ease-in-out;
+}
+
+.karaoke {
+  position: fixed;
+  right: 0;
+  bottom: 1.5rem;
+  left: 0;
+  z-index: 9999999999;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1.2em;
+  font-family: 'GT America BkM';
+  text-transform: uppercase;
+  text-shadow: .05em .05em #000;
+  -webkit-text-stroke: 1px #000;
+  color: #fff;
+}
+
+.karaoke-active {
+  color: #0f0;
+}

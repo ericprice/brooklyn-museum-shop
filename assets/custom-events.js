@@ -52,3 +52,4 @@ document.addEventListener("product:quantity-update", function (evt) {
   console.log("Product quantity updated");
   console.log(evt.detail.quantity, evt.detail.variant);
 });
+

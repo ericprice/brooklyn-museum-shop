@@ -13404,7 +13404,6 @@ if (quickViewModalElement) {
   quickViewModal(quickViewModalElement);
 } // Setup modal
 
-
 var modalElement = n$2("[data-modal]", document);
 modal(modalElement);
 var flashModal = n$2("[data-flash-alert]", document);
