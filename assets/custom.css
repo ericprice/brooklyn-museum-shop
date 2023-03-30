@@ -513,11 +513,14 @@ button .ff-heading,
   border-radius: 1.5rem;
 }
 
-.footer {
+#shopify-section-footer {
+  background: #e3e3e3;
   margin-top: var(--spacing-7);
+}
+
+.footer {
   padding-top: 2rem !important;
   padding-bottom: .75rem !important;
-  background: #e3e3e3;
 }
 
 .footer-inner {
@@ -641,7 +644,6 @@ button .ff-heading,
   height: auto;
   font-size: var(--font-size-heading-5-base);
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 .footer__newsletter .footer__newsletter-button {
@@ -785,4 +787,15 @@ button .ff-heading,
 
 .grid-item__heading {
   font-size: var(--font-size-heading-display-1);
+}
+
+.image-hero__text-container-below {
+  color: #000;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.image-hero__text-container-below .btn.btn--secondary.btn--overlay {
+  color: #000;
+  border: 1px solid #000;
 }

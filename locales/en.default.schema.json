@@ -3169,7 +3169,8 @@
         "option_middle_right": "Middle right",
         "option_top_center": "Top center",
         "option_top_left": "Top left",
-        "option_top_right": "Top right"
+        "option_top_right": "Top right",
+        "option_below": "Below"
       },
       "alignment_vertical": {
         "label": "Alignment vertical",

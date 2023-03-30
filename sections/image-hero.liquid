@@ -92,10 +92,97 @@
         src_set_type: "full-width"
       -%}
     </div>
-    <div class="image-hero__overlay"></div>
 
-    <div class="image-hero__text-container-wrapper">
-      <div class="image-hero__text-container">
+    {%- unless horizontal_position == 'below' -%}
+      <div class="image-hero__overlay"></div>
+      <div class="image-hero__text-container-wrapper">
+        <div class="image-hero__text-container">
+          {%- unless section.settings.media_link == blank -%}
+            <a
+              href="{{ section.settings.media_link }}"
+              class="image-hero__image-link"
+              aria-label="{{ section.settings.media_link }}"
+            ></a>
+          {%- endunless -%}
+  
+          <div class="image-hero__text-container-inner section-blocks animation--section-blocks">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'accent' -%}
+                  {%- unless block.settings.accent == blank -%}
+                    <p class="image-hero__text-container-accent fs-accent section-blocks__accent">
+                      {{ block.settings.accent }}
+                    </p>
+                  {%- endunless -%}
+                {%- when 'heading' -%}
+                  {%- unless block.settings.title == blank -%}
+                    <h2 class="image-hero__text-container-heading ff-heading {{ block.settings.heading_font_class }} section-blocks__heading">
+                      {{ block.settings.title }}
+                    </h2>
+                  {%- endunless -%}
+                {%- when 'subheading' -%}
+                  {%- unless block.settings.subheading == blank -%}
+                    <h2 class="image-hero__text-container-subheading ff-subheading {{ block.settings.subheading_font_class }} section-blocks__subheading">
+                      {{ block.settings.subheading }}
+                    </h2>
+                  {%- endunless -%}
+                {%- when 'text' -%}
+                  {%- unless block.settings.text == blank -%}
+                    <div class="image-hero__text-container-text rte ff-body {{ block.settings.text_font_class }} section-blocks__text">
+                      {{ block.settings.text }}
+                    </div>
+                  {%- endunless -%}
+                {%- when 'image' -%}
+                  {%-
+                    render 'image-block' with
+                    shopify_attributes: block.shopify_attributes,
+                    wrapper_class: 'image-hero__text-container-image  section-blocks__image',
+                    image: block.settings.image,
+                    width: block.settings.image_size,
+                    mobile_width: block.settings.image_size_mobile,
+                    break_to_mobile_at: '480',
+                    align: text_position_modifier,
+                    align_mobile: text_position_modifier_mobile,
+                  -%}
+                {%- when 'button' -%}
+                  {%-
+                    render 'button-block' with
+                    wrapper_class: "image-hero__text-container-image-button section-blocks__button",
+                    link: block.settings.link,
+                    label: block.settings.link_text,
+                    button_style: block.settings.button_style,
+                    is_overlay: true,
+                    button_alignment: text_position_modifier,
+                    button_alignment_mobile: text_position_modifier_mobile,
+                    buttons_can_inline: true,
+                    forloop: forloop
+                  -%}
+                {%- when 'play-button' -%}
+                  {%-
+                    render 'play-button-block' with
+                    wrapper_class: 'image-hero__text-container-image-play-button section-blocks__video-button',
+                    shopify_attributes: block.shopify_attributes,
+                    poster_image: block.settings.poster_image,
+                    poster_aspect: block.settings.aspect_ratio,
+                    video_url: block.settings.video_url,
+                    label: block.settings.text,
+                    button_alignment: text_position_modifier,
+                    button_alignment_mobile: text_position_modifier_mobile,
+                    icon_style: block.settings.icon_style
+                  -%}
+                {%- when 'border' -%}
+                  {%- render 'border-block' -%}
+                {%- when 'spacer' -%}
+                  {%- render 'spacer-block' with space: block.settings.space -%}
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    {%- endunless -%}
+  </div>
+  {%- if horizontal_position == 'below' -%}
+    <div class="image-hero__text-container-below">
         {%- unless section.settings.media_link == blank -%}
           <a
             href="{{ section.settings.media_link }}"
@@ -103,7 +190,7 @@
             aria-label="{{ section.settings.media_link }}"
           ></a>
         {%- endunless -%}
-
+  
         <div class="image-hero__text-container-inner section-blocks animation--section-blocks">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
@@ -176,9 +263,8 @@
             {%- endcase -%}
           {%- endfor -%}
         </div>
-      </div>
     </div>
-  </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -263,7 +349,8 @@
         { "label": "t:shared.settings.alignment_matrix.option_middle_right", "value": "flex-end_center" },
         { "label": "t:shared.settings.alignment_matrix.option_bottom_left", "value": "flex-start_flex-end" },
         { "label": "t:shared.settings.alignment_matrix.option_bottom_center", "value": "center_flex-end" },
-        { "label": "t:shared.settings.alignment_matrix.option_bottom_right", "value": "flex-end_flex-end" }
+        { "label": "t:shared.settings.alignment_matrix.option_bottom_right", "value": "flex-end_flex-end" },
+        { "label": "t:shared.settings.alignment_matrix.option_below", "value": "below" }
       ],
       "default": "center_center"
     },
@@ -280,7 +367,8 @@
         { "label": "t:shared.settings.alignment_matrix.option_middle_right", "value": "flex-end_center" },
         { "label": "t:shared.settings.alignment_matrix.option_bottom_left", "value": "flex-start_flex-end" },
         { "label": "t:shared.settings.alignment_matrix.option_bottom_center", "value": "center_flex-end" },
-        { "label": "t:shared.settings.alignment_matrix.option_bottom_right", "value": "flex-end_flex-end" }
+        { "label": "t:shared.settings.alignment_matrix.option_bottom_right", "value": "flex-end_flex-end" },
+        { "label": "t:shared.settings.alignment_matrix.option_below", "value": "below" }
       ],
       "default": "center_center"
     },
