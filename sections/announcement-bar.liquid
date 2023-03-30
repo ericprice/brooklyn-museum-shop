@@ -1,31 +1,10 @@
-{%- assign timing_in_ms = section.settings.timing | times: 1000 -%}
-
 {%- if section.blocks.size -%}
-  {%- capture items -%}
-    {%- for block in section.blocks -%}
-      <div
-        class="announcement-bar__item ff-body fs-body-50 swiper-slide"
-        {% unless forloop.first %}
-          inert
-        {% endunless %}
-        data-slide
-        {{ block.shopify_attributes }}
-        data-index="{{ forloop.index0 }}"
-      >
-        {%- assign has_mobile_text = false -%}
-        {%- if block.settings.title_mobile != blank and block.settings.title_mobile != block.settings.title -%}
-          {%- assign has_mobile_text = true -%}
-          <div class="announcement-bar__item-inner announcement-bar__item-inner-mobile-only">
-            {%- if block.settings.link != blank -%}
-              <a class="announcement-bar__link color-inherit" href="{{ block.settings.link }}">
-                {{ block.settings.title_mobile | replace: '<a ', '<span class="fake-link" ' | replace: '</a>', '</span>' }}
-              </a>
-            {%- else -%}
-              {{ block.settings.title_mobile }}
-            {%- endif -%}
-          </div>
-        {%- endif -%}
-        <div class="announcement-bar__item-inner{% if has_mobile_text %} announcement-bar__item-inner-desktop-only{% endif %}">
+    <div
+      class="marquee3k"
+      data-speed="1"
+    >
+      {%- for block in section.blocks -%}
+        <div class="marquee-item">
           {%- if block.settings.link != blank -%}
             <a class="announcement-bar__link color-inherit" href="{{ block.settings.link }}">
               {{ block.settings.title | replace: '<a ', '<span class="fake-link" ' | replace: '</a>', '</span>' }}
@@ -34,53 +13,8 @@
             {{ block.settings.title }}
           {%- endif -%}
         </div>
-      </div>
-    {%- endfor -%}
-  {%- endcapture -%}
-  <div
-    {% if section.blocks.size == 0 %}
-      hidden
-    {% endif %}
-    class="announcement-bar{% if section.blocks.size == 0 %} hidden{% endif %}"
-    data-section-id="{{ section.id }}"
-    data-section-type="announcement-bar"
-    data-timing="{{ timing_in_ms }}"
-    data-item-count="{{ section.blocks.size }}"
-    style="
-      --color-background: {{ section.settings.color_background }};
-      --color-gradient-overlay: {{ section.settings.color_background | color_modify: 'alpha', 1 }};
-      --color-gradient-overlay-transparent: {{ section.settings.color_background | color_modify: 'alpha', 0 }};
-      --color-text: {{ section.settings.color_text }};
-    "
-  >
-    <div class="ui-overlap-wrap">
-      <div class="ui-overlap">
-        <div class="fader left">
-          <button class="slider-nav-button slider-nav-button-prev" title="{{ 'general.accessibility.previous' | t }}">
-            {% render 'icon' with icon: 'chevron' %}
-          </button>
-        </div>
-        <div class="ui-overlap-item-clones" aria-hidden="true">
-          {{ items }}
-        </div>
-        <div class="fader right">
-          <button class="slider-nav-button slider-nav-button-next" title="{{ 'general.accessibility.next' | t }}">
-            {% render 'icon' with icon: 'chevron' %}
-          </button>
-        </div>
-      </div>
+      {%- endfor -%}
     </div>
-    <div
-      class="swiper"
-      data-slider
-      data-autoplay-enabled="{{ section.settings.autoplay_enabled }}"
-      data-autoplay-delay="{{ section.settings.autoplay_delay | times: 1000 }}"
-    >
-      <div class="swiper-wrapper">
-        {{ items }}
-      </div>
-    </div>
-  </div>
 {%- endif -%}
 
 {% schema %}

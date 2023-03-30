@@ -106,6 +106,7 @@ input, textarea, select {
 html,
 body {
   font-family: 'GT America Mono', sans-serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -769,8 +770,33 @@ button .ff-heading,
   color: #fff !important;
 }
 
+//.grid-item {
+//  position: relative;
+//}
+//
+//.grid-item__inner {
+//  position: absolute;
+//  width: auto;
+//  height: auto;
+//  top: .5rem;
+//  right: .75rem;
+//  bottom: .5rem;
+//  left: .75rem;
+//  border-radius: 1.5rem;
+//  overflow: hidden;
+//}
+
 .grid-item {
   position: relative;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.grid-item__wrapper {
+  position: relative;
+  width: 100%;
+  height: 30vw;
+  min-height: 350px;
 }
 
 .grid-item__inner {
@@ -783,6 +809,20 @@ button .ff-heading,
   left: .75rem;
   border-radius: 1.5rem;
   overflow: hidden;
+}
+
+.grid-text-below {
+  color: #000;
+  padding: .5rem 0;
+  text-align: center;
+}
+
+.grid-text-below a {
+  color: #000;
+}
+
+.grid-item__heading {
+  font-size: var(--font-size-heading-display-1);
 }
 
 .grid-item__heading {
@@ -798,4 +838,37 @@ button .ff-heading,
 .image-hero__text-container-below .btn.btn--secondary.btn--overlay {
   color: #000;
   border: 1px solid #000;
+}
+
+.marquee3k {
+  position: relative;
+}
+
+.marquee3k::before,
+.marquee3k::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 5rem;
+  pointer-events: none;
+}
+
+.marquee3k::before {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);
+}
+
+.marquee3k::after {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+}
+
+.marquee3k > .marquee-item {
+  display: none;
+}
+
+.marquee-item {
+  padding: .825rem 2rem;
 }
